@@ -42,6 +42,11 @@ class ActionService : AccessibilityService() {
         return performGlobalAction(GLOBAL_ACTION_POWER_DIALOG)
     }
 
+    fun back(): Boolean {
+        CrashHandler.logUserAction("Back")
+        return performGlobalAction(GLOBAL_ACTION_BACK)
+    }
+
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {}
     override fun onInterrupt() {}
 
